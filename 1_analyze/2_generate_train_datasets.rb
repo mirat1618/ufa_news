@@ -2,10 +2,7 @@ require 'yaml'
 require_relative 'keywords'
 
 def normalize_text_content(text_content)
-  text_content.downcase!
-  text_content.gsub!(/ё/,'е')
-  text_content.gsub!(/[^А-я0-9]|\s{2,}/,' ')
-  text_content.strip!
+  text_content.downcase.gsub(/ё/,'е').gsub(/[^А-я0-9]|\s{2,}/,' ').strip
 end
 
 def generate_train_datasets(keywords, *folders, output_folder)

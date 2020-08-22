@@ -22,8 +22,7 @@ class SVMRecognizer
     if category && args[0].is_a?(String)
       normalized_text_content = normalize_text_content(args[0])
       matches = compute_matches(normalized_text_content, category[1])
-      prediction = @models[category[1]].predict(Libsvm::Node.features(matches)) == 1
-      prediction
+      @models[category[1]].predict(Libsvm::Node.features(matches)) == 1
     elsif !args[0].is_a?(String)
       raise ArgumentError, "#{args[0]} should be String"
     else
