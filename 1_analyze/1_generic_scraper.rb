@@ -16,6 +16,5 @@ links.each do |link|
     description = description_raw.split.join(' ')
 
     link = item.css('link').text
-
   end
 end
