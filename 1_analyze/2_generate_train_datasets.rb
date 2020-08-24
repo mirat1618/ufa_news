@@ -22,7 +22,7 @@ def generate_train_datasets(keywords, *folders, output_folder)
         end
       end
     end
-    File.open("#{output_folder}/#{index+1}_#{category}_dataset.yaml", 'w') {|file| file.write(freqs.to_yaml)}
+    File.open("#{output_folder}/#{index+1}_#{category}_dataset.yaml", 'w') { |file| file.write(freqs.to_yaml) }
   end
 end
 

@@ -6,7 +6,7 @@ class FANNRecognizer
   attr_accessor :models
 
   def initialize(path_to_dir)
-    @models = Hash.new
+    @models = {}
     load_models(path_to_dir)
   end
 
@@ -18,7 +18,7 @@ class FANNRecognizer
   end
 
   def method_missing(message, *args)
-    category = message.match(/is_((traffic)|(sport)|(gov))\?/)
+    category = message.match(/(traffic|sport|gov)\?/)
     if category && args[0].is_a?(String)
       normalized_text_content = normalize_text_content(args[0])
       matches = compute_matches(normalized_text_content, category[1])
@@ -37,6 +37,6 @@ article =  'В Оренбурге начался суд по иску проку
 
 fann = FANNRecognizer.new('5_trained_models/2_fann/')
 
-p fann.is_traffic?(article)
-p fann.is_sport?(article)
-p fann.is_gov?(article)
+p fann.traffic?(article)
+p fann.sport?(article)
+p fann.gov?(article)

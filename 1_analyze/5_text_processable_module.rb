@@ -8,7 +8,7 @@ module TextProcessable
   def compute_matches(normalized_text_content, category)
     keywords_matches = []
     eval("#{category.upcase}_KEYWORDS").each do |keyword|
-      keywords_matches << normalized_text_content.scan(keyword).length
+      keywords_matches << normalized_text_content.scan(keyword).size
     end
     keywords_matches
   end

@@ -3,8 +3,9 @@ require 'ruby-fann'
 
 def extract_dataset(path_to_dataset)
   input = YAML.load(File.read(path_to_dataset))
-  inputs, outputs = [], []
-  input.each {|array| inputs << array[0]; outputs << [array[1]]}
+  inputs = []
+  outputs = []
+  input.each { |array| inputs << array[0]; outputs << [array[1]] }
   [inputs, outputs]
 end
 
@@ -23,7 +24,8 @@ def test_model(extracted_dataset, trained_model, category)
 end
 
 def train_model(extracted_dataset)
-  inputs, outputs = extracted_dataset[0], extracted_dataset[1]
+  inputs = extracted_dataset[0]
+  outputs = extracted_dataset[1]
   num_inputs = inputs[0].count
   num_outputs = outputs[0].count
 
