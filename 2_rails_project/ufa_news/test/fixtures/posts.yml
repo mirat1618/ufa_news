@@ -5,9 +5,17 @@ one:
   content: MyText
   link: MyText
   author: MyText
+  type: MyText
+  svm: 9.99
+  fann: 9.99
+  rank: 9.99
 
 two:
   title: MyText
   content: MyText
   link: MyText
   author: MyText
+  type: MyText
+  svm: 9.99
+  fann: 9.99
+  rank: 9.99
