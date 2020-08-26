@@ -1,0 +1,58 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.container
+  display: flex
+  flex-flow: row wrap
+
+
+.post-column
+  display: flex
+  flex-flow: column nowrap
+  flex: 1
+  align-items: center
+
+
+.post
+  display: flex
+  flex-flow: column nowrap
+  flex: 1
+  min-height: 175px
+  width: 350px
+  background-color: white
+  overflow: hidden
+  margin: 5px 0
+  word-wrap: break-word
+  cursor: pointer
+
+  &:hover .post-bottom
+    box-shadow: inset 0 -12px 25px #bbbaba
+
+.link
+  z-index: 2
+
+.post-top
+  flex: 4
+
+.post-bottom
+  flex: 2
+  padding: 4px 8px
+  background-color: white
+  box-shadow: inset 0 -8px 25px #c9c9c9
+  transition: 0.3s
+  font: bold 16px Arial
+  overflow: hidden
+
+
+
+
+
+
+
+
+
+
+
