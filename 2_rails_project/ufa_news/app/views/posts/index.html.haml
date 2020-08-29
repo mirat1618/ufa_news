@@ -1,24 +1,39 @@
-.container
-  .post-column
-    .post{style: "background-image: url(#{image_path "1.jpg"})", onclick: 'window.open("https://google.com")'}
-      .post-top
-      .post-bottom
-        bottombottombottom
-    .post
-      .post-top
-      .post-bottom
-        bottombottombottombottombottombottombottombottombottom
-  .post-column
-    .post
-      .post-top
-      .post-bottom
-        bottombottombottombottombottombottombottombottombottom
+.header-row
+  .header-item
+    = image_tag 'logo.svg'
+.header-row
+  .header-item
+    = image_tag 'traffic.svg'
+  .header-item
+    = image_tag 'sport.svg'
+  .header-item
+    = image_tag 'gov.svg'
+
+.content-container
   .post-column
     .post
-      .post-top
-      .post-bottom
-        bottombottombottombottombottombottombottombottombottom
+    - @traffic_posts.each do |post|
+      .post{style: "background: url('#{image_path post.image_source}')", onclick: "window.open('#{post.link}')"}
+        .post-top
+        .post-bottom
+          = post.title
+  .post-column
     .post
-      .post-top
-      .post-bottom
-        bottombottombottombottombottombottombottombottombottom
+    - @sport_posts.each do |post|
+      .post{style: "background: url('#{image_path post.image_source}')", onclick: "window.open('#{post.link}')"}
+        .post-top
+        .post-bottom
+          = post.title
+  .post-column
+    .post
+    - @gov_posts.each do |post|
+      .post{style: "background: url('#{image_path post.image_source}')", onclick: "window.open('#{post.link}')"}
+        .post-top
+        .post-bottom
+          = post.title
+.footer-row
+  .footer-item
+    .footer-item-text
+      @mirat1618, 2020.
+
+

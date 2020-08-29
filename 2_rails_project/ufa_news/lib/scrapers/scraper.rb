@@ -32,6 +32,9 @@ def scrape
           }
       }
   }
+
+  Post.delete_all
+
   sources.each do |source_name, source_attributes|
     rss_feed = Nokogiri::XML(open(source_attributes[:url]))
     rss_items = rss_feed.xpath('//channel//item')
@@ -53,15 +56,16 @@ def scrape
         if values[0] || values[1]
           rank = 0
           rank = 1 if values[0] && values[1]
+          article_image = 'default.jpeg' if article_image.nil?
           Post.create(
-              title: article_title,
-              content: article_content,
-              link: article_link,
-              author: source_name,
-              category: category,
-              rank: rank,
-              image_source: article_image
-          )
+               title: article_title,
+               content: article_content,
+               link: article_link,
+               author: source_name,
+               category: category,
+               rank: rank,
+               image_source: article_image
+           )
           puts "#{category} #{rank} #{article_title}"
         end
       end
