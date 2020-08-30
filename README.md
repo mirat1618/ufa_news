@@ -5,8 +5,8 @@
 Приложение проводит сбор RSS feed региональных новостных веб-сайтов,
 определяет тематику статей с помощью нейронных сетей:
 
-- Support Vector Machine (SVM) (`gem 'libsvm'`);
-- Fast Artificial Neural (FANN) (`gem 'fann'`).
+- Support Vector Machine — SVM (`gem 'libsvm'`);
+- Fast Artificial Neural — FANN (`gem 'fann'`).
  
 Сохраняются для отображения статьи, соответствующие следующим категориям:
 
@@ -14,7 +14,7 @@
 - «Спорт»;
 - «Власть».
 
-![Скриншот веб-сайта](1_screenshot.png)
+![Скриншот веб-сайта](screenshot.png)
 
 Используемые RSS-источники:
 - Городской интернет-портал UTV.RU ([utv.ru/rss.xml](https://utv.ru/rss.xml));
@@ -34,6 +34,9 @@
 
 Классы **SVMRecognizer** и **FANNRecognizer** — классы обученных нейронных сетей SVM и FANN
 соответственно.
+
+---
+@mirat1618, 2020.
 
 
 
