@@ -7,7 +7,7 @@
 - «Спорт»;
 - «Власть».
 
-![website screenshot](.readmefiles/1_screenshot.png)
+![website screenshot](1_screenshot.png)
 
 Используемые RSS-источники:
 - [UTV](https://utv.ru/rss.xml);
