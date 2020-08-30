@@ -56,7 +56,7 @@ def scrape
         if values[0] || values[1]
           rank = 0
           rank = 1 if values[0] && values[1]
-          article_image = 'default.jpeg' if article_image.nil?
+          article_image = 'default.jpg' if article_image.nil?
           Post.create(
                title: article_title,
                content: article_content,
