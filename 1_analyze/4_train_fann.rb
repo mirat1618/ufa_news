@@ -17,10 +17,13 @@ end
 def test_model(extracted_dataset, trained_model, category)
   puts "----\n#{category.capitalize}\n----"
   inputs, outputs = extracted_dataset[0], extracted_dataset[1]
+  i = 0.0
   inputs.each.with_index do |matches, index|
     prediction = trained_model.run(matches)
     puts "#{prediction} #{outputs[index]}"
+    i += 1 if prediction[0].to_i == outputs[index][0]
   end
+  puts "Total: #{inputs.count}; True predictions: #{i}. Quality: #{(i/inputs.count).round(4)}"
 end
 
 def train_model(extracted_dataset)

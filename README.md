@@ -5,8 +5,10 @@
 Приложение проводит сбор RSS feed региональных новостных веб-сайтов,
 определяет тематику статей с помощью нейронных сетей:
 
-- Support Vector Machine — SVM (`gem 'libsvm'`);
-- Fast Artificial Neural — FANN (`gem 'fann'`).
+- Support Vector Machine — **SVM** (`gem 'libsvm'`);
+- Fast Artificial Neural — **FANN** (`gem 'fann'`).
+
+Качество классификации: **86,91%** (SVM); **63,64%** (FANN).
  
 Сохраняются для отображения статьи, соответствующие следующим категориям:
 
@@ -32,8 +34,8 @@
 Модуль **TextProcessable** предназначен для нормализации текстового
 содержания анализируемых статей.  
 
-Классы **SVMRecognizer** и **FANNRecognizer** — классы обученных нейронных сетей SVM и FANN
-соответственно.
+Классы **SVMRecognizer** и **FANNRecognizer** — классы обученных нейронных
+сетей **SVM** и **FANN** соответственно.
 
 ---
 @mirat1618, 2020.
