@@ -1,26 +1,29 @@
 ### Ufa news
-Веб-сайт проводит сбор 
-**Support Vector Machine (SVM)** gem libsvm
-**Fast Artificial Neural (FANN)**  gem fann
+
+(https://ufanews.herokuapp.com)  
+
+Приложение проводит сбор RSS feed региональных новостных веб-сайтов, подразделяет
+с помощью двух нейронных сетей **Support Vector Machine (SVM)** (`gem 'libsvm'`)
+и **Fast Artificial Neural (FANN)** (`gem 'fann'`) на 3 категории:
 
 - «Дорожно-транспортные происшествия»;
 - «Спорт»;
 - «Власть».
 
-![website screenshot](1_screenshot.png)
+![Скриншот веб-сайта](1_screenshot.png)
 
 Используемые RSS-источники:
-- [UTV](https://utv.ru/rss.xml);
-- [Российская Газета](https://rg.ru/org/filial/bashkortostan/rss.xml);
-- [Коммерсантъ](https://www.kommersant.ru/rss/regions/ufa_all.xml).  
+- Городской интернет-портал UTV.RU ([utv.ru/rss.xml](https://utv.ru/rss.xml));
+- Российская Газета Башкортостан ([rg.ru/org/filial/bashkortostan/rss.xml](https://rg.ru/org/filial/bashkortostan/rss.xml));
+- Коммерсантъ Уфа ([kommersant.ru/rss/regions/ufa_all.xml](https://www.kommersant.ru/rss/regions/ufa_all.xml)).  
 
 Содержание папок:
-- **1_analyze** (обучение нейронных сетей — новостные статьи, анализ частот появления слов, тренировка и тестирование сетей);
-- **2_rails_project/ufa_news**  (rails-приложение веб-сайта).
-
-- Сбор RSS-feed региональных новостей; 
-- Сортировка статей на категории с использованием нейронных сетей;
-- Отображение статей в соответствующих разделах.
+- **1_analyze** (обучение нейросетей):
+  - собранные новостные статьи;
+  - анализ частот появления слов;
+  - списки ключевых слов;
+  - обучение нейросетей и тестирование их работы.
+- **2_rails_project/ufa_news** (rails-приложение).
 
 
 
