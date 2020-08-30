@@ -6,7 +6,7 @@
 определяет тематику статей с помощью нейронных сетей:
 
 - Support Vector Machine — **SVM** (`gem 'libsvm'`);
-- Fast Artificial Neural — **FANN** (`gem 'fann'`).
+- Fast Artificial Neural — **FANN** (`gem 'ruby-fann'`).
 
 Качество классификации: **86,91%** (SVM); **63,64%** (FANN).
  
