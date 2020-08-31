@@ -1,8 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @test = 'Hello'
-    @traffic_posts = Post.where(category: 'traffic')
-    @sport_posts = Post.where(category: 'sport')
-    @gov_posts = Post.where(category: 'gov')
+    @traffic_posts = Post.traffic
+    @sport_posts = Post.sport
+    @gov_posts = Post.gov
   end
 end
